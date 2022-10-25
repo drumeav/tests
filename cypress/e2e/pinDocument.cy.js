@@ -1,5 +1,5 @@
-describe('Should delete a file from the documents list of a track', () => {
-    it('navigate to Reviewer page, log in as AS and delete the last file in the documents list',
+describe('Should pin a file to the top of the documents list', () => {
+    it('navigate to Reviewer page and log in as AS and pin a document',
         {viewportWidth: 1200},
         () => {
             cy.visit('/')
@@ -23,18 +23,12 @@ describe('Should delete a file from the documents list of a track', () => {
 
             cy.get('nav>a').last().click()
 
-            cy.get('#cell-2-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd').click()
-            //cy.get('#cell-2-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd').then(($el) => {
-            //cy.wrap($el).find('a').first().click()
-            //})
+            cy.get('#cell-6-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd > .DocumentActions > .PinButton').click()
+
+
+
+
 
 
         })
 })
-
-
-
-
-
-
-
