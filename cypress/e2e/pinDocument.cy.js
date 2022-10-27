@@ -22,8 +22,11 @@ describe('Should pin a file to the top of the documents list', () => {
             })
 
             cy.get('nav>a').last().click()
+            cy.get('[class="PinButton"]').first().click()
 
-            cy.get('#cell-6-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd > .DocumentActions > .PinButton').click()
+
+
+            //cy.get('#cell-4-8de697c0-13b6-4592-80d8-53eb0a5e32e8 > .DocumentActions > .PinButton').click()
 
 
 

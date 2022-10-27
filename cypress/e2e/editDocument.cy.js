@@ -25,18 +25,17 @@ describe('Should be able to edit the type of a document', () => {
 
 
 
-            cy.get("#\\33 9f20916-38b8-4b4f-93cf-4aeaeeb5d1dd > div > i").click();
+            cy.get("#\\38 de697c0-13b6-4592-80d8-53eb0a5e32e8 > div > i").click();
 
-            cy.get("#\\33 9f20916-38b8-4b4f-93cf-4aeaeeb5d1dd > span > a:nth-child(2)").click();
+  cy.get("#\\38 de697c0-13b6-4592-80d8-53eb0a5e32e8 > span > a:nth-child(2)").click();
 
-            cy.get("#Main > div > div > div > div.htco-Paper.TrackDetailsContent > div > div:nth-child(6) > div.SlideInFromRightSlideIn.isOpen > form > div:nth-child(1) > div.htco-DropdownSelector.css-2b097c-container > div > div.css-1hb7zxy-IndicatorsContainer > div > i").click();
+  cy.get("#Main > div > div > div > div.htco-Paper.TrackDetailsContent > div > div:nth-child(6) > div.SlideInFromRightSlideIn.isOpen > form > div:nth-child(1) > div.htco-DropdownSelector.css-2b097c-container > div > div.css-g1d714-ValueContainer").click();
 
-            cy.get('div.css-1uccc91-singleValue').click()
+  cy.get("#react-select-5-option-37").click();
 
-            cy.get("#Main > div > div > div > div.htco-Paper.TrackDetailsContent > div > div:nth-child(6) > div.SlideInFromRightSlideIn.isOpen > form > div.EditDocumentFormButtonsContainer > button.htco-Button.htco-isSolid").click();
+  cy.get("#Main > div > div > div > div.htco-Paper.TrackDetailsContent > div > div:nth-child(6) > div.SlideInFromRightSlideIn.isOpen > form > div.EditDocumentFormButtonsContainer > button.htco-Button.htco-isSolid").click();
 
-
-                cy.get('#cell-3-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd > div').should('have.text', 'Lease Agreements')
+                cy.get('#cell-3-8de697c0-13b6-4592-80d8-53eb0a5e32e8 > div').should('have.text', 'Lease Agreements')
 
         })
 })

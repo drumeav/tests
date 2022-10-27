@@ -1,5 +1,5 @@
-describe('Should view a file from the documents list of a track', () => {
-    it('navigate to Reviewer page, log in as AS and delete the last file in the documents list',
+describe('Should download a file from the documents list of a track', () => {
+    it('navigate to Reviewer page, log in as AS and download a document',
         {viewportWidth: 1200},
         () => {
             cy.visit('/')
@@ -23,18 +23,11 @@ describe('Should view a file from the documents list of a track', () => {
 
             cy.get('nav>a').last().click()
 
-            cy.get('[href="#"]').first().click()
-            //cy.get('#cell-2-39f20916-38b8-4b4f-93cf-4aeaeeb5d1dd').then(($el) => {
-            //cy.wrap($el).find('a').first().click()
-            //})
+            cy.get('input[type="checkbox"]').last().check({force: true})
 
-
+            cy.get('[class="ButtonBar"]').click()
+            cy.get('[class="ButtonBar"]').click().then(($el) => {
+                cy.wrap($el).contains('Download').click()
+            })
         })
 })
-
-
-
-
-
-
-
