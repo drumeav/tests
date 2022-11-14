@@ -31,3 +31,4 @@ Cypress.Commands.add('login',
 
 
     })
+import "cypress-file-upload"
