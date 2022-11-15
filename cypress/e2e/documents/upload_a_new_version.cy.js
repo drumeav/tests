@@ -32,11 +32,13 @@ describe("Should be able to upload a new version of a document", () => {
         "cypress/fixtures/images/drivers_license.jpg",
         { force: true }
       );
+
+      cy.get('[class="PinButton"]').first().click();
       cy.get('[class="htco-Button htco-isSolid"]').first().click();
 
-      cy.get('[class="DocumentsControllerLinkName"]')
+      /*cy.get('[class="DocumentsControllerLinkName"]')
         .first()
-        .should("have.text", "drivers_license.jpg");
+        .should("have.text", "drivers_license.jpg");*/
 
       cy.get('[class="icon htco-Icon icon-history icon-lg"]').should(
         "be.visible"

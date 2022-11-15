@@ -25,7 +25,9 @@ describe("Should open the first document of a track and see it in the Viewer", (
       cy.get("nav>a").last().click();
 
       cy.get('[class="DocumentsControllerLinkName"]').first().click();
-      cy.get('[class="PreviewImageContainer"]').should("be.visible");
+      cy.get('[class="PreviewDocument"]', { timeout: 3000 }).should(
+        "be.visible" //[class="PreviewImageContainer"]
+      );
     }
   );
 });
