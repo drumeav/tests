@@ -24,6 +24,15 @@ describe("Should combine uploaded docs into single PDF file", () => {
 
       cy.get("nav>a").last().click();
 
+      cy.get('[type="checkbox"]').check({ force: true });
+      cy.get(
+        "#Main > div > div > div > div.htco-Paper.TrackDetailsContent > div > div.ButtonBar > span > button:nth-child(2)"
+      ).click();
+
+      cy.get(
+        "body > div.animated.htco-ModalWrapper > div > div > div > div > div.htco-ModalConfirmFooter > button.htco-Button.htco-isDanger"
+      ).click();
+
       cy.get("div.ButtonBar >button").click();
 
       cy.get('[class="htco-DropdownSelector css-2b097c-container"]').type(
@@ -53,9 +62,7 @@ describe("Should combine uploaded docs into single PDF file", () => {
 
       cy.get('[role="checkbox"]').first().click();
 
-      cy.get('[class="htco-TextInput NewMergedDocumentField"]').type(
-        "Merged"
-      );
+      cy.get('[class="htco-TextInput NewMergedDocumentField"]').type("Merged");
 
       cy.get('[class="icon htco-Icon icon-pin icon-2x"]').click();
 

@@ -33,10 +33,9 @@ describe("Should be able to edit the type of a document", () => {
         .type("Virtual Appraisal{enter}");
 
       cy.get('[class="htco-Button htco-isSolid"]').last().click();
-      cy.get("#cell-3-b12a8d73-15ee-49ee-9fda-e15e70d7848e").should(
-        "have.text",
-        "Virtual Appraisal"
-      );
+      cy.get('[data-column-id="3"]')
+        .last()
+        .should("have.text", "Virtual Appraisal");
     }
   );
 });
